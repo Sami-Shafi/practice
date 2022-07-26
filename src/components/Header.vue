@@ -10,7 +10,7 @@ export default {
 		onHomePage() {
 			if (this.$route.path === "/") {
 				return true;
-			}
+			} return false;
 		},
 	},
 };
