@@ -27,17 +27,6 @@ export default {
 			:formShown="showForm"
 			@toggle-Form="toggleForm"
 		/>
-		<!-- <transition name="fade">
-			<div v-if="showForm">
-				<AddTask @add-task="addTask" />
-			</div>
-		</transition> -->
-
-		<!-- <Tasks
-			:tasks="tasks"
-			@delete-task="deleteTask"
-			@toggle-reminder="toggleReminder"
-		/> -->
 
 		<router-view :showForm="showForm"></router-view>
 

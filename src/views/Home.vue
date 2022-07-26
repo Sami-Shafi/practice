@@ -80,9 +80,8 @@ export default {
 </script>
 
 <template>
-	<!-- <h2>Home</h2> -->
 	<transition name="fade">
-		<div v-if="showForm">
+		<div v-show="showForm">
 			<AddTask @add-task="addTask" />
 		</div>
 	</transition>

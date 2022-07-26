@@ -2,9 +2,16 @@
 import Button from "./Button.vue";
 export default {
 	name: "Header",
-	props: { title: String, formShown: Boolean},
+	props: { title: String, formShown: Boolean },
 	components: {
 		Button,
+	},
+	computed: {
+		onHomePage() {
+			if (this.$route.path === "/") {
+				return true;
+			}
+		},
 	},
 };
 </script>
@@ -12,11 +19,14 @@ export default {
 <template>
 	<header>
 		<h1>{{ title }}</h1>
-		<Button
-			:text="formShown ? 'Close' : 'Add'"
-			bgColor="navy"
-			@btn-click="$emit('toggle-Form')"
-		/>
+		<transition name="fade">
+			<Button
+				:text="formShown ? 'Close' : 'Add'"
+				bgColor="navy"
+				@btn-click="$emit('toggle-Form')"
+				v-show="onHomePage"
+			/>
+		</transition>
 	</header>
 </template>
 
