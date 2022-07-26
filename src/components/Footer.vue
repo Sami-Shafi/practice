@@ -7,8 +7,8 @@
 <template>
     <footer>
         <p>Copyright &copy; 2022</p>
-        <a href="#">Home</a>
-        <a href="/about">About</a>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
     </footer>
 </template>
 

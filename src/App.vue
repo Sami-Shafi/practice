@@ -98,6 +98,9 @@ export default {
 				<AddTask @add-task="addTask" />
 			</div>
 		</transition>
+
+        <router-view></router-view>
+
 		<Tasks
 			:tasks="tasks"
 			@delete-task="deleteTask"
